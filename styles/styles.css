@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+
+.layout {
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+}
+
+.header {
+  width: inherit;
+  background: #1fab89;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.header-logo {
+  max-width: 100px;
+}
+
+.header-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: inherit;
+}
+
+.header-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  text-decoration: none;
+  color: #222831;
+  max-width: 100px;
+}
+
+.header-menu-item:hover {
+  background: #1c9e7d;
+  text-decoration: underline;
+}
+
+.greeting {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  background: #9df3c4;
+}
+
+.greeting-presentation {
+  padding-top: 20px;
+  color: #5c6470;
+  flex-shrink: 0;
+  letter-spacing: -.2px;
+  line-height: 1.5em;
+  font-size: 25px;
+}
+
+.greeting-presentation strong {
+  color: #393e46;
+}
+
+.greeting-image {
+  flex-shrink: 0;
+  width: 250px;
+}
+
+.skills {
+  background: #d7fbe8;
+  padding: 10px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+}
+
+.skill-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  background: white;
+  max-width: 250px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px #c2e2d1;
+}
+
+.soft-skills {
+  padding: 10px;
+}
+
+.soft-skills-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.soft-skill-box {
+  margin: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "soft-skill-title soft-skill-image"
+                       "soft-skill-description soft-skill-image"
+                       "soft-skill-suggestion soft-skill-image";
+  column-gap: 25px;
+  box-shadow: 10px 10px 10px #449e886c;
+}
+
+.soft-skill-title,
+.soft-skill-description,
+.soft-skill-suggestion {
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.soft-skill-title {
+  grid-area: soft-skill-title;
+  align-items: center;
+}
+
+.soft-skill-description {
+  grid-area: soft-skill-description;
+}
+
+.soft-skill-suggestion {
+  grid-area: soft-skill-suggestion;
+}
+
+.soft-skill-image {
+  grid-area: soft-skill-image;
+  margin: 0;
+  max-width: 250px;
+  display: flex;
+  justify-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .soft-skill-box {
+    grid-template-columns: 1fr;
+    grid-template-areas: "soft-skill-title"
+                         "soft-skill-image"
+                         "soft-skill-description"
+                         "soft-skill-suggestion";
+  }
+  .soft-skill-title,
+  .soft-skill-description,
+  .soft-skill-suggestion {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.footer {
+  background: #222831;
+  color: white;
+}
