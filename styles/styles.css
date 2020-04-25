@@ -4,14 +4,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-
 .layout {
   margin: 0px;
   font-family: 'Lato', sans-serif;
 }
 
 .wrapper {
-  border: 1px solid red;
   max-width: 1000px;
   margin: 0 auto;
   display: inherit;
@@ -19,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: inherit;
   height: inherit;
   flex-wrap: inherit;
+  flex: 1;
 }
 
 .header {
@@ -28,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 60px;
   justify-content: space-between;
   align-content: center;
+  flex-wrap: wrap;
 }
 
 .header-logo {
@@ -95,8 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skill-box {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
   flex-shrink: 0;
   background: white;
   max-width: 250px;
@@ -110,13 +109,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .soft-skills-container {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 .soft-skill-box {
   margin: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   padding: 10px;
   border-radius: 15px;
   border: 1px solid black;
@@ -189,7 +187,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hobby-card {
   border: 1px solid black;
-  max-width: 320px;
+  max-width: 300px;
   background: #d9e9e0;
   border-radius: 10px;
   overflow: hidden;
@@ -205,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hobby-description {
   background: white;
-  margin-top: -40px;
+  margin-top: -50px;
   margin-left: 20px;
   margin-right: 20px;
   position: relative;
@@ -265,8 +263,22 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('../assets/deno_logo_3.svg');
 }
 
+.social-link.walkirex {
+  background-image: url('../assets/walkirex.svg');
+}
+
+.social-link.andysaurio {
+  background-image: url('../assets/andysaurio.svg');
+}
+
 .footer {
   background: #222831;
   color: white;
   padding: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+  /* border: 1px solid red; */
+  }
 }
