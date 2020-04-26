@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-content: center;
   flex-wrap: wrap;
+  padding: 0 10px;
 }
 
 .header-logo {
@@ -62,6 +63,8 @@ h1, h2, h3, h4, h5, h6 {
   justify-items: center;
   justify-content: space-evenly;
   background: #9df3c4;
+  padding: 10px;
+  padding-bottom: 0;
 }
 
 .greeting-presentation {
@@ -79,6 +82,8 @@ h1, h2, h3, h4, h5, h6 {
 .greeting-image {
   flex-shrink: 0;
   width: 250px;
+  margin-top: -80px;
+
 }
 
 .skills {
@@ -96,12 +101,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-box {
   margin: 10px;
-  flex-shrink: 0;
   background: white;
   max-width: 250px;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 10px 10px 10px #c2e2d1;
+}
+
+.skill-box figure {
+  margin: 0;
 }
 
 .soft-skills {
@@ -152,13 +160,14 @@ h1, h2, h3, h4, h5, h6 {
   grid-area: soft-skill-image;
   margin: 0;
   max-width: 250px;
+  width: 100%;
   display: flex;
   justify-self: center;
 }
 
 @media screen and (max-width: 768px) {
   .soft-skill-box {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-areas: "soft-skill-title"
                          "soft-skill-image"
                          "soft-skill-description"
@@ -167,6 +176,7 @@ h1, h2, h3, h4, h5, h6 {
   .soft-skill-title,
   .soft-skill-description,
   .soft-skill-suggestion {
+    width: inherit;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -183,11 +193,13 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
   justify-items: center;
   align-items: center;
+  padding: 10px;
 }
 
 .hobby-card {
   border: 1px solid black;
-  max-width: 300px;
+  max-width: 278px;
+  width: 100%;
   background: #d9e9e0;
   border-radius: 10px;
   overflow: hidden;
@@ -199,6 +211,7 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
   max-width: inherit;
   max-height: 200px;
+  width: 100%;
 }
 
 .hobby-description {
@@ -216,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact {
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   background: #1c9e7d;
   color: white;
   display: flex;
@@ -277,8 +290,70 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .greeting-presentation {
+    padding-top: 20px;
+  }
+
+  .social-links {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .skill-box {
+    max-width: 100%;
+  }
+
+  .skill-box figure {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .skill-box figure img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hobby-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    width: inherit;
+    background: #1fab89;
+    display: block;
+    height: 100%;
+    text-align: center;
+  }
+
+  .header-menu {
+    padding: 10px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contact-form #email #topic {
+    width: 100%;
+    max-width: inherit;
+  }
+}
+
+@media screen and (max-width: 320px) {
   .wrapper {
-  /* border: 1px solid red; */
+    width: 100%;
   }
 }
