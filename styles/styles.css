@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   justify-items: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 .skill-box {
@@ -112,6 +112,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-box figure {
   margin: 0;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  margin-top: 25%;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .soft-skills {
@@ -179,7 +197,6 @@ h1, h2, h3, h4, h5, h6 {
   .soft-skill-description,
   .soft-skill-suggestion {
     width: inherit;
-    /* padding: 10px; */
     display: flex;
     justify-content: center;
   }
@@ -195,7 +212,6 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
   justify-items: center;
   align-items: center;
-  padding: 10px;
 }
 
 .hobby-card {
@@ -209,11 +225,16 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px;
 }
 
+.hobby-video,
 .hobby-image {
   object-fit: cover;
   max-width: inherit;
   max-height: 200px;
   width: 100%;
+}
+
+.video-video {
+  filter: opacity(90%) grayscale(50%);
 }
 
 .hobby-description {
@@ -290,6 +311,18 @@ h1, h2, h3, h4, h5, h6 {
   background: #222831;
   color: white;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer a :hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 1025px) {
@@ -324,6 +357,10 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 300px;
   }
 
+  .video-container {
+    margin-top: 5%;
+  }
+
   .soft-skill-box {
     margin: 0;
     margin-bottom: 20px;
@@ -332,6 +369,10 @@ h1, h2, h3, h4, h5, h6 {
   .hobby-card {
     width: 100%;
     max-width: 100%;
+  }
+
+  .footer {
+    justify-content: center;
   }
 }
 
