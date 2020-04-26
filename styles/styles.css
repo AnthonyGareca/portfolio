@@ -21,14 +21,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  width: inherit;
+  width: 100%;
   background: #1fab89;
   display: flex;
   height: 60px;
   justify-content: space-between;
   align-content: center;
   flex-wrap: wrap;
-  padding: 0 10px;
+  position: fixed;
+  z-index: 1;
 }
 
 .header-logo {
@@ -64,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
   background: #9df3c4;
   padding: 10px;
+  padding-top: 70px;
   padding-bottom: 0;
 }
 
@@ -177,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
   .soft-skill-description,
   .soft-skill-suggestion {
     width: inherit;
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
     justify-content: center;
   }
@@ -306,7 +308,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 640px) {
   .skill-box {
     max-width: 100%;
   }
@@ -322,6 +324,11 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 300px;
   }
 
+  .soft-skill-box {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
   .hobby-card {
     width: 100%;
     max-width: 100%;
@@ -330,11 +337,15 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 480px) {
   .header {
-    width: inherit;
+    width: 100%;
     background: #1fab89;
     display: block;
-    height: 100%;
+    height: auto;
     text-align: center;
+  }
+
+  .greeting {
+    padding-top: 152px;
   }
 
   .header-menu {
