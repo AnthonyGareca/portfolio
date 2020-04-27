@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="./assets/mini-logo.png">
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./fonts/style.css">
   <title>Anthony Portfolio</title>
 </head>
 <body class="layout">
@@ -12,13 +13,16 @@
   <!-- Start Header -->
 
   <header class="header">
+    <div class="header-burger-icon" id="header-burger-icon">
+      <span class="icon-menu"></span>
+    </div>
     <div class="wrapper">
       <div class="header-name">
         <a href="#greeting">
           <img src="./assets/anthony-logo.png" alt="Logo A" class="header-logo">
         </a>
       </div>
-      <nav class="header-menu">
+      <nav class="header-menu" id="header-menu">
         <a href="#skills" class="header-menu-item">Skills</a>
         <a href="#soft-skills" class="header-menu-item">Soft Skills</a>
         <a href="#hobbies" class="header-menu-item">Hobbies</a>
@@ -185,6 +189,20 @@
   </footer>
 
   <!-- End Footer -->
+<script>
+  const menu = document.querySelector('#header-menu');
+  const burgerButton = document.querySelector('#header-burger-icon');
+  const isActive = 'is-active';
 
+  burgerButton.addEventListener('click', changeMenuState);
+
+  function changeMenuState() {
+    if (menu.classList.contains(isActive)) {
+      menu.classList.remove(isActive);
+    } else {
+      menu.classList.add(isActive);
+    }
+  }
+</script>
 </body>
 </html>

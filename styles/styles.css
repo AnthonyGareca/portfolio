@@ -57,6 +57,19 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
+.header-burger-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 40px;
+  left: 10px;
+  top: 10px;
+  position:fixed;
+  display: none;
+}
+
 .greeting {
   display: flex;
   flex-wrap: wrap;
@@ -379,18 +392,56 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 480px) {
   .header {
     width: 100%;
-    background: #1fab89;
+    background: transparent;
     display: block;
     height: auto;
     text-align: center;
   }
 
-  .greeting {
-    padding-top: 152px;
+  .header-name {
+    display: none;
   }
 
   .header-menu {
+    position: fixed;
+    display: flex;
+    background: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    left: -100vw;
+    transition: 0.3s;
+  }
+
+  .header-menu.is-active {
+    left: 0;
+  }
+
+  .header-menu-item {
+    width: 100%;
+    color: white;
     padding: 10px;
+  }
+
+  .header-menu-item:hover {
+    background: rgba(8, 48, 38, 0.9);
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+
+  .header-burger-icon {
+    display: block;
+    color: white;
+    z-index: 2;
+
+  }
+
+  .greeting {
+    padding: 30px;
   }
 
   .contact-form {
