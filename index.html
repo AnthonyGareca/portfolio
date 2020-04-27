@@ -180,7 +180,6 @@
 
   <footer class="footer">
     <div class="wrapper">
-
       <p>
         Made to practice <strong>HTML</strong> and <strong>CSS</strong>.
       </p>
@@ -189,20 +188,36 @@
   </footer>
 
   <!-- End Footer -->
-<script>
-  const menu = document.querySelector('#header-menu');
-  const burgerButton = document.querySelector('#header-burger-icon');
-  const isActive = 'is-active';
 
-  burgerButton.addEventListener('click', changeMenuState);
+  <script>
+    const menu = document.querySelector('#header-menu');
+    const burgerButton = document.querySelector('#header-burger-icon');
+    const isActive = 'is-active';
 
-  function changeMenuState() {
-    if (menu.classList.contains(isActive)) {
-      menu.classList.remove(isActive);
-    } else {
-      menu.classList.add(isActive);
+    const smallView = window.matchMedia('screen and (max-width: 480px)');
+
+    smallView.addListener(validation);
+
+    function validation(event) {
+      if (event.matches) {
+        burgerButton.addEventListener('click', changeMenuState);
+        console.log('add');
+      } else {
+        burgerButton.removeEventListener('click', changeMenuState);
+        console.log('remove');
+      }
     }
-  }
-</script>
+
+    function changeMenuState() {
+      if (menu.classList.contains(isActive)) {
+        menu.classList.remove(isActive);
+      } else {
+        menu.classList.add(isActive);
+      }
+    }
+
+    validation(smallView);
+  </script>
+
 </body>
 </html>
