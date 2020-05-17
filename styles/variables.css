@@ -1,0 +1,63 @@
+:root {
+
+  /* TODO: Add dark colors as variables. */
+
+  /* Layout */
+  --background: #fff;
+  --color: #0f0f0f;
+
+  --background-dark: #000;
+  --color-dark: #f1f1f1;
+  /* Layout */
+
+  /* Header */
+  --header-background: #1fab89;
+  --header-menu-item-hover: #1c9e7d;
+  /* Header */
+
+  /* Switch */
+  --switch-background: #222831;
+  --switch-color: #fff;
+
+  --switch-background-dark: #ffa500;
+  --switch-color-dark: #000;
+  /* Switch */
+
+  /* Burger */
+  /* Burger */
+
+  /* Greeting */
+  --greeting-background: #9DF3C4;
+  --greeting-color: #5C6470;
+  --greeting-color-bold: #393E46;
+  /* Greeting */
+
+  /* Skills */
+  --skills-background: #D7FBE8;
+  --skills-box-background: #fff;
+  --skills-box-shadow: #C2E2D1;
+  /* Skills */
+
+  /* Soft Skills */
+  --soft-skill-box-border: #000;
+  --soft-skill-box-shadow: #449E886C;
+  /* Soft Skills */
+
+  /* Hobbies */
+  --hobby-card-background: #D9E9E0;
+  --hobby-card-border: #000;
+  --hobby-description-background: #FFF;
+  /* Hobbies */
+
+  /* Contact */
+  --contact-background: var(--header-background);
+  --contact-color: #fff;
+  --contact-input-color: #fff;
+  /* Contact */
+
+  /* Footer */
+  --footer-background: #222831;
+  --footer-color: #fff;
+  /* Footer */
+
+}

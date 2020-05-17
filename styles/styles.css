@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
+@import './variables.css';
+@import './dark-styles.css';
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
@@ -7,6 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 .layout {
   margin: 0px;
   font-family: 'Lato', sans-serif;
+  transition: .3s ease all;
 }
 
 .wrapper {
@@ -22,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
   width: 100%;
-  background: #1fab89;
+  background: var(--header-background);
   display: flex;
   height: 60px;
   justify-content: space-between;
@@ -38,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-menu {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   height: inherit;
 }
 
@@ -48,13 +52,58 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   height: inherit;
   text-decoration: none;
-  color: #222831;
+  color: inherit;
   max-width: 100px;
 }
 
 .header-menu-item:hover {
-  background: #1c9e7d;
+  background: var(--header-menu-item-hover);
   text-decoration: underline;
+}
+
+.switch {
+  background: var(--switch-background);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  width: 52px;
+  height: 26px;
+  align-self: center;
+  justify-self: center;
+  justify-content: space-between;
+}
+
+.switch span {
+  display: block;
+  color: var(--switch-color);
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch.active {
+  background: var(--switch-background-dark);
+  color: var(--switch-color-dark);
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
 }
 
 .header-burger-icon {
@@ -76,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-items: center;
   justify-content: space-evenly;
-  background: #9df3c4;
+  background: var(--greeting-background);
   padding: 10px;
   padding-top: 70px;
   padding-bottom: 0;
@@ -84,14 +133,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .greeting-presentation {
   padding-top: 20px;
-  color: #5c6470;
+  color: var(--greeting-color);
   letter-spacing: -.2px;
   line-height: 1.5em;
   font-size: 25px;
 }
 
 .greeting-presentation strong {
-  color: #393e46;
+  color: var(--greeting-color-bold);
 }
 
 .greeting-image {
@@ -102,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skills {
-  background: #d7fbe8;
+  background: var(--skills-background);
   padding: 10px;
 }
 
@@ -116,11 +165,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-box {
   margin: 10px;
-  background: white;
+  background: var(--skills-box-background);
   max-width: 250px;
   padding: 15px;
   border-radius: 15px;
-  box-shadow: 10px 10px 10px #c2e2d1;
+  box-shadow: 10px 10px 10px var(--skills-box-shadow);
 }
 
 .skill-box figure {
@@ -158,14 +207,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 15px;
-  border: 1px solid black;
+  border: 1px solid var(--soft-skill-box-border);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "soft-skill-title soft-skill-image"
                        "soft-skill-description soft-skill-image"
                        "soft-skill-suggestion soft-skill-image";
   column-gap: 25px;
-  box-shadow: 10px 10px 10px #449e886c;
+  box-shadow: 10px 10px 10px var(--soft-skill-box-shadow);
 }
 
 .soft-skill-title,
@@ -228,10 +277,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hobby-card {
-  border: 1px solid black;
+  background: var(--hobby-card-background);
+  border: 1px solid var(--hobby-card-border);
   max-width: 278px;
   width: 100%;
-  background: #d9e9e0;
   border-radius: 10px;
   overflow: hidden;
   flex-shrink: 0;
@@ -251,7 +300,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hobby-description {
-  background: white;
+  background: var(--hobby-description-background);
   margin-top: -50px;
   margin-left: 20px;
   margin-right: 20px;
@@ -266,8 +315,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact {
   padding: 10px 10px 10px 10px;
-  background: #1c9e7d;
-  color: white;
+  background: var(--contact-background);
+  color: var(--contact-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -284,7 +333,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-form input {
-  border-color: gray;
+  border-color: var(--contact-input-color);
   border-style: solid;
   border-radius: 5px;
   padding: 5px 20px 5px 25px;
@@ -292,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-form button {
   background: transparent;
-  color: white;
+  color: var(--contact-input-color);
   padding: 10px 0;
   border-radius: 10px;
   border-style: solid;
@@ -321,8 +370,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
-  background: #222831;
-  color: white;
+  background: var(--footer-background);
+  color: var(--footer-color);
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -331,7 +380,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer a {
   text-decoration: none;
-  color: white;
+  color: inherit;
 }
 
 .footer a :hover {

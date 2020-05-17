@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="./assets/mini-logo.png">
   <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="./fonts/style.css">
+  <!-- TODO: Clean extra data from Font Awesome.  -->
+  <link rel="stylesheet" href="./icons/css/all.css">
   <title>Anthony Portfolio</title>
 </head>
 <body class="layout">
@@ -14,7 +15,7 @@
 
   <header class="header">
     <div class="header-burger-icon" id="header-burger-icon">
-      <span class="icon-menu"></span>
+      <i class="fas fa-hamburger"></i>
     </div>
     <div class="wrapper">
       <div class="header-name">
@@ -27,6 +28,10 @@
         <a href="#soft-skills" class="header-menu-item">Soft Skills</a>
         <a href="#hobbies" class="header-menu-item">Hobbies</a>
         <a href="#contact" class="header-menu-item">contact</a>
+        <button id="switch" class="switch">
+          <span><i class="fas fa-sun"></i></span>
+          <span><i class="fas fa-moon"></i></span>
+        </button>
       </nav>
     </div>
   </header>
@@ -181,7 +186,7 @@
   <footer class="footer">
     <div class="wrapper">
       <p>
-        Made to practice <strong>HTML</strong> and <strong>CSS</strong>.
+        Made to practice <strong>HTML</strong>, <strong>CSS</strong> and a little bit of <strong>JavaScript</strong>.
       </p>
       <p>Builded by <a href="https://github.com/AnthonyGareca" target="_blank"><strong>Andres Antony Gareca Arias</strong></a>.</p>
     </div>
@@ -189,35 +194,7 @@
 
   <!-- End Footer -->
 
-  <script>
-    const menu = document.querySelector('#header-menu');
-    const burgerButton = document.querySelector('#header-burger-icon');
-    const isActive = 'is-active';
-
-    const smallView = window.matchMedia('screen and (max-width: 480px)');
-
-    smallView.addListener(validation);
-
-    function validation(event) {
-      if (event.matches) {
-        burgerButton.addEventListener('click', changeMenuState);
-        console.log('add');
-      } else {
-        burgerButton.removeEventListener('click', changeMenuState);
-        console.log('remove');
-      }
-    }
-
-    function changeMenuState() {
-      if (menu.classList.contains(isActive)) {
-        menu.classList.remove(isActive);
-      } else {
-        menu.classList.add(isActive);
-      }
-    }
-
-    validation(smallView);
-  </script>
+  <script src="./js/app.js"></script>
 
 </body>
 </html>
