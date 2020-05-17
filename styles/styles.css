@@ -11,6 +11,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   font-family: 'Lato', sans-serif;
   transition: .3s ease all;
+  background: var(--background);
+  color: var(--color);
 }
 
 .wrapper {

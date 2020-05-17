@@ -5,9 +5,6 @@
   /* Layout */
   --background: #fff;
   --color: #0f0f0f;
-
-  --background-dark: #000;
-  --color-dark: #f1f1f1;
   /* Layout */
 
   /* Header */
@@ -19,32 +16,34 @@
   --switch-background: #222831;
   --switch-color: #fff;
 
+  
   --switch-background-dark: #ffa500;
   --switch-color-dark: #000;
   /* Switch */
-
+  
   /* Burger */
   /* Burger */
-
+  
   /* Greeting */
-  --greeting-background: #9DF3C4;
-  --greeting-color: #5C6470;
-  --greeting-color-bold: #393E46;
+  --greeting-background: #9df3c4;
+  --greeting-color: #5c6470;
+  --greeting-color-bold: #393e46;
   /* Greeting */
-
+  
   /* Skills */
-  --skills-background: #D7FBE8;
+  --skills-background: #d7fbe8;
   --skills-box-background: #fff;
-  --skills-box-shadow: #C2E2D1;
+  --skills-box-shadow: #c2e2d1;
   /* Skills */
-
+  
+  --test:#449e886c;
   /* Soft Skills */
   --soft-skill-box-border: #000;
-  --soft-skill-box-shadow: #449E886C;
+  --soft-skill-box-shadow: #449e886c;
   /* Soft Skills */
 
   /* Hobbies */
-  --hobby-card-background: #D9E9E0;
+  --hobby-card-background: #d9e9e0;
   --hobby-card-border: #000;
   --hobby-description-background: #FFF;
   /* Hobbies */
