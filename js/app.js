@@ -25,6 +25,7 @@ function changeMenuState() {
 validation(smallView);
 
 // Dark mode
+// TODO: Move to external source.
 const x = [
   {
     key: '--background',
@@ -131,3 +132,13 @@ const switchDark = () => {
     root.style.setProperty(current.key, current[attribute]);
   });
 };
+
+// Progress bar
+
+let progress = document.querySelector('.progress-bar');
+let totalHeight = document.body.scrollHeight - window.innerHeight;
+window.onscroll = () => {
+  let progressHeight = (window.pageYOffset / totalHeight) * 100;
+  console.log(progressHeight);
+  progress.style.height = `${progressHeight}%`;
+}

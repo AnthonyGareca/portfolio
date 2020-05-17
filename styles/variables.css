@@ -1,6 +1,6 @@
 :root {
 
-  /* TODO: Add dark colors as variables. */
+  /* TODO: Look for a way to add values from external source. */
 
   /* Layout */
   --background: #fff;
@@ -16,27 +16,25 @@
   --switch-background: #222831;
   --switch-color: #fff;
 
-  
   --switch-background-dark: #ffa500;
   --switch-color-dark: #000;
   /* Switch */
-  
+
   /* Burger */
   /* Burger */
-  
+
   /* Greeting */
   --greeting-background: #9df3c4;
   --greeting-color: #5c6470;
   --greeting-color-bold: #393e46;
   /* Greeting */
-  
+
   /* Skills */
   --skills-background: #d7fbe8;
   --skills-box-background: #fff;
   --skills-box-shadow: #c2e2d1;
   /* Skills */
-  
-  --test:#449e886c;
+
   /* Soft Skills */
   --soft-skill-box-border: #000;
   --soft-skill-box-shadow: #449e886c;
