@@ -1,0 +1,24 @@
+
+.footer {
+  background: var(--footer-background);
+  color: var(--footer-color);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer a :hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 640px) {
+  .footer {
+    justify-content: center;
+  }
+}

@@ -2,6 +2,12 @@
 
   /* TODO: Look for a way to add values from external source. */
 
+  /* BREAKPOINTS */
+  /* TODO: make breakpoints constants */
+  --mobile: '';
+
+  /* COLORS */
+
   /* Layout */
   --background: #fff;
   --color: #0f0f0f;

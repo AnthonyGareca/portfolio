@@ -1,0 +1,41 @@
+.greeting {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  background: var(--greeting-background);
+  padding: 10px;
+  padding-top: 70px;
+  padding-bottom: 0;
+}
+
+.greeting-presentation {
+  padding-top: 20px;
+  color: var(--greeting-color);
+  letter-spacing: -.2px;
+  line-height: 1.5em;
+  font-size: 25px;
+}
+
+.greeting-presentation strong {
+  color: var(--greeting-color-bold);
+}
+
+.greeting-image {
+  flex-shrink: 0;
+  width: 250px;
+  margin-top: -80px;
+}
+
+@media screen and (max-width: 768px) {
+  .greeting-presentation {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .greeting {
+    padding: 30px;
+  }
+}

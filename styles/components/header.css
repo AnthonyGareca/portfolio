@@ -1,0 +1,149 @@
+
+.header {
+  width: 100%;
+  background: var(--header-background);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header-logo {
+  max-width: 100px;
+}
+
+.header-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  height: inherit;
+}
+
+.header-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  text-decoration: none;
+  color: inherit;
+  max-width: 100px;
+}
+
+.header-menu-item:hover {
+  background: var(--header-menu-item-hover);
+  text-decoration: underline;
+}
+
+.switch {
+  background: var(--switch-background);
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+  width: 52px;
+  height: 26px;
+  align-self: center;
+  justify-self: center;
+  justify-content: space-between;
+}
+
+.switch span {
+  display: block;
+  color: var(--switch-color);
+  align-self: center;
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: .3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch.active {
+  background: var(--switch-background-dark);
+  color: var(--switch-color-dark);
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+
+.header-burger-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 40px;
+  left: 10px;
+  top: 10px;
+  position:fixed;
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    width: 100%;
+    background: transparent;
+    display: block;
+    height: auto;
+    text-align: center;
+  }
+
+  .header-name {
+    display: none;
+  }
+
+  .header-menu {
+    position: fixed;
+    display: flex;
+    background: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    left: -100vw;
+    transition: 0.3s;
+  }
+
+  .header-menu.is-active {
+    left: 0;
+  }
+
+  .header-menu-item {
+    width: 100%;
+    color: white;
+    padding: 10px;
+  }
+
+  .header-menu-item:hover {
+    background: rgba(8, 48, 38, 0.9);
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+
+  .header-burger-icon {
+    display: block;
+    color: white;
+    z-index: 2;
+
+  }
+}

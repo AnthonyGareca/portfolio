@@ -1,0 +1,77 @@
+
+.soft-skills {
+  padding: 10px;
+}
+
+.soft-skills-container {
+  padding: 10px;
+}
+
+.soft-skill-box {
+  margin: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid var(--soft-skill-box-border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "soft-skill-title soft-skill-image"
+                       "soft-skill-description soft-skill-image"
+                       "soft-skill-suggestion soft-skill-image";
+  column-gap: 25px;
+  box-shadow: 10px 10px 10px var(--soft-skill-box-shadow);
+}
+
+.soft-skill-title,
+.soft-skill-description,
+.soft-skill-suggestion {
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.soft-skill-title {
+  grid-area: soft-skill-title;
+  align-items: center;
+}
+
+.soft-skill-description {
+  grid-area: soft-skill-description;
+}
+
+.soft-skill-suggestion {
+  grid-area: soft-skill-suggestion;
+}
+
+.soft-skill-image {
+  grid-area: soft-skill-image;
+  margin: 0;
+  max-width: 250px;
+  width: 100%;
+  display: flex;
+  justify-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .soft-skill-box {
+    grid-template-columns: 100%;
+    grid-template-areas: "soft-skill-title"
+                         "soft-skill-image"
+                         "soft-skill-description"
+                         "soft-skill-suggestion";
+  }
+  .soft-skill-title,
+  .soft-skill-description,
+  .soft-skill-suggestion {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .soft-skill-box {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
